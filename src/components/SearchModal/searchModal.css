@@ -1,0 +1,50 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  z-index: 1000;
+  background-color: white;
+  inset: 0 0 0;
+  top: -100%;
+  padding: 15px 40px;
+  transition: 0.5s linear all;
+}
+.modal.active {
+  top: 0;
+}
+.modal .wrapper {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  align-items: center;
+}
+.modal button {
+  width: 60px;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.modal svg {
+  width: 20px;
+  font-size: 20px;
+}
+.modal input {
+  width: calc(100% - 90px);
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+.modal span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
