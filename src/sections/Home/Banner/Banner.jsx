@@ -1,10 +1,10 @@
 import BannerSlider from "./BannerSlider";
 import "./banner.css";
 
-const Banner = () => {
+const Banner = ({ bannerMovieItems }) => {
   return (
     <section className="bannerSection">
-      <BannerSlider />
+      <BannerSlider bannerMovieItems={bannerMovieItems} />
     </section>
   );
 };

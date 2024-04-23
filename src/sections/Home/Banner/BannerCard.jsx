@@ -6,7 +6,6 @@ const BannerCard = ({ item }) => {
     item.backdrop_path ? item.backdrop_path : item.poster_path
   );
 
-  console.log(item);
   return (
     <div className="box">
       <div className="coverImg">
