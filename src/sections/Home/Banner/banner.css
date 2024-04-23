@@ -1,0 +1,133 @@
+.bannerSection {
+  width: 100%;
+  height: 100%;
+}
+.bannerSection .slick-slider {
+  width: 100%;
+  height: 100%;
+}
+.bannerSection .slick-list {
+  width: 100%;
+  height: 100%;
+}
+.bannerSection .slick-track {
+  width: 100%;
+  height: 100%;
+}
+.bannerSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bannerSlider .box {
+  width: 100%;
+  height: 100vh;
+}
+.box > .details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 100px;
+}
+.coverImg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+.coverImg img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.coverImg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 88;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+}
+.bannerSlider h1 {
+  font-size: 90px;
+  line-height: 130%;
+  text-transform: uppercase;
+  font-weight: 800;
+  background-image: url("../../../assets/texure.jpg");
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+.bannerSlider .content {
+  flex-direction: column;
+  gap: 20px;
+  width: calc(100% - 350px);
+}
+.bannerSlider .rating {
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rating span {
+  font-weight: 700;
+}
+.rating label {
+  text-decoration: underline;
+}
+.rating .imdb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.bannerSlider p {
+  font-size: 18px;
+  line-height: 170%;
+}
+.bannerSlider .poster {
+  width: 300px;
+  aspect-ratio: 3/5;
+}
+.bannerSlider .buttons {
+  gap: 20px;
+}
+.bannerSlider .about-btn {
+  box-shadow: 0px 0px 7px 8px #ff00004d;
+  transition: 0.3s linear all;
+}
+.bannerSlider .about-btn:hover {
+  box-shadow: 0px 0px 7px 15px #ff00004d;
+}
+.bannerSlider .buttons button {
+  border-radius: 20px;
+  font-weight: 500;
+}
+.buttons a {
+  color: white;
+}
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}

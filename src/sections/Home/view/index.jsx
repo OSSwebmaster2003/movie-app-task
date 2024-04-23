@@ -1,8 +1,9 @@
-import Banner from "../Banner";
+import Banner from "../Banner/Banner";
+import "../home.css";
 
 export default function HomeView() {
   return (
-    <div>
+    <div className="home">
       <Banner />
     </div>
   );

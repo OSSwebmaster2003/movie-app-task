@@ -1,8 +1,9 @@
 import BannerSlider from "./BannerSlider";
+import "./banner.css";
 
 const Banner = () => {
   return (
-    <section className="container">
+    <section className="bannerSection">
       <BannerSlider />
     </section>
   );

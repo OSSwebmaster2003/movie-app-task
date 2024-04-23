@@ -36,6 +36,18 @@ button {
   font-size: 17px;
   cursor: pointer;
 }
+.outlined-btn {
+  font-size: 17px;
+  cursor: pointer;
+  background: inherit;
+  border: 2px solid white;
+  transition: 0.3s linear all;
+}
+.outlined-btn:hover {
+  box-shadow: unset;
+  color: #e50813;
+  background-color: white;
+}
 p {
   line-height: 30px;
 }
@@ -48,6 +60,9 @@ p {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .control-btn .next {
   position: absolute;
