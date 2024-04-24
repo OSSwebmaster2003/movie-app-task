@@ -2,17 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
 import "./navbar.css";
-import SearchModal from "../SearchModal/SearchModal";
 
 const Navbar = () => {
   const [mobile, setMobile] = useState(false);
-  const [searchModal, setSearchModal] = useState(false);
-
-  const handleSearchModal = () => {
-    setSearchModal((prev) => !prev);
-  };
 
   return (
     <>
@@ -38,16 +31,8 @@ const Navbar = () => {
               {mobile ? <FaTimes /> : <FaBarsStaggered />}
             </button>
           </nav>
-          <div className="account flexBetween">
-            <IoSearch onClick={handleSearchModal} />
-            <button>Subscribe Now</button>
-          </div>
         </div>
       </header>
-      <SearchModal
-        searchModal={searchModal}
-        handleSearchModal={handleSearchModal}
-      />
     </>
   );
 };

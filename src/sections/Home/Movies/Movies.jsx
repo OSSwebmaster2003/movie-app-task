@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Col, Row } from "antd";
 import { IoSearch } from "react-icons/io5";
-import MovieCard from "./MovieCard";
+import MiniMovieCard from "../../../components/MiniMovieCard/MiniMovieCard";
 import "./movies.css";
 
 const Movies = ({ movies, keyword }) => {
@@ -57,7 +57,7 @@ const Movies = ({ movies, keyword }) => {
               key={movie.id}
               style={{ marginTop: "16px" }}
             >
-              <MovieCard movie={movie} />
+              <MiniMovieCard movie={movie} />
             </Col>
           ))}
         </Row>

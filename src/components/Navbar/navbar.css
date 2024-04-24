@@ -15,6 +15,7 @@ header {
 }
 header nav {
   gap: 30px;
+  width: 100%;
 }
 header a {
   color: #fff;
@@ -38,7 +39,7 @@ header button {
 .toggle {
   display: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   header nav .flexBetween {
     display: none;
   }

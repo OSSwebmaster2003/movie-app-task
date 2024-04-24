@@ -5,7 +5,7 @@ const MovieDetail = () => {
   return (
     <>
       <Helmet>
-        <title>Movie</title>
+        <title>Movie Detail</title>
       </Helmet>
 
       <MovieDetailView />

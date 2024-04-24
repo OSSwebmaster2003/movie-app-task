@@ -1,12 +1,13 @@
-import { Card } from "antd";
-import apiConfig from "../../../api/apiConfig";
 import { Link } from "react-router-dom";
 import { GrFormNextLink } from "react-icons/gr";
+import { Card } from "antd";
+import apiConfig from "../../api/apiConfig";
+import "./miniMovieCard.css";
 
-const MovieCard = ({ movie }) => {
-  const poster = apiConfig.originalImage(movie.poster_path);
+const MiniMovieCard = ({ movie }) => {
+  const poster = apiConfig.originalImage(movie?.poster_path);
   return (
-    <Link to={`/movie/${movie.id}`}>
+    <Link to={`/movie/${movie?.id}`}>
       <Card
         style={{
           width: "100%",
@@ -16,7 +17,7 @@ const MovieCard = ({ movie }) => {
         }}
         cover={
           <img
-            alt={movie.title}
+            alt={movie?.title}
             src={poster}
             style={{
               width: "100%",
@@ -28,7 +29,7 @@ const MovieCard = ({ movie }) => {
         }
       >
         <div className="flexBetween card-body">
-          <h3>{movie.title}</h3>
+          <h3>{movie?.title}</h3>
           <button>
             <GrFormNextLink />
           </button>
@@ -38,4 +39,4 @@ const MovieCard = ({ movie }) => {
   );
 };
 
-export default MovieCard;
+export default MiniMovieCard;
