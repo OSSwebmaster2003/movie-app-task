@@ -86,3 +86,43 @@ section.movies {
   font-size: 20px;
   font-weight: 700;
 }
+/* responsive  */
+@media (max-width: 1200px) {
+  .search-wrapper {
+    width: 400px;
+    height: 40px;
+  }
+}
+@media (max-width: 992px) {
+  section.movies {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 768px) {
+  section.movies h1 {
+    font-size: 20px;
+  }
+  .search-wrapper {
+    width: 250px;
+    height: 40px;
+  }
+  .search-wrapper input {
+    width: calc(100% - 30px);
+  }
+  .search-wrapper button {
+    width: 30px;
+  }
+  .search-wrapper svg {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .movies .section-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .search-wrapper {
+    width: 100%;
+  }
+}

@@ -8,7 +8,7 @@ const Details = ({ movie }) => {
           {movie?.status} : {movie?.release_date}
         </h4>
         <h1>{movie?.title}</h1>
-        <div className="flex">
+        <div className="flex alignCenter">
           <ReactStars
             value={movie?.vote_average.toFixed(1) / 2}
             count={5}

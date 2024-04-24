@@ -79,3 +79,52 @@ section.movie-details {
   box-shadow: 0px 0px 7px 15px #ff00004d;
   transform: scale(1.05);
 }
+/* responsive  */
+@media (max-width: 992px) {
+  .movie-details .details-card {
+    width: 500px;
+    top: -250px;
+  }
+  .details-card .website {
+    right: 10px;
+    bottom: 10px;
+  }
+  .movie-details button.watch {
+    top: -70px;
+  }
+}
+@media (max-width: 768px) {
+  .movie-details .details-card {
+    width: 350px;
+    padding: 20px;
+  }
+  .details-card .production {
+    gap: 5px;
+  }
+  .details-card .genres {
+    margin-top: 15px;
+  }
+  .details-card .website {
+    position: relative;
+    inset: 0;
+    top: 10px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .movie-details .details-card {
+    width: 100%;
+  }
+  .movie-details button.watch {
+    top: -230px;
+    width: 90px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+  .details-card h1 {
+    width: calc(100% - 95px);
+  }
+  .details-card h4 {
+    width: calc(100% - 95px);
+  }
+}
