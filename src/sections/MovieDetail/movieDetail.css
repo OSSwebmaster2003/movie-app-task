@@ -1,0 +1,81 @@
+.movie-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+}
+section.banner {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.movie-details {
+  position: relative;
+}
+.movie-details .details-card {
+  padding: 50px;
+  position: absolute;
+  left: 0;
+  top: -200px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  width: 700px;
+}
+.details-card h4 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.details-card h1 {
+  letter-spacing: 4px;
+  line-height: 150%;
+  margin-bottom: 15px;
+}
+.details-card .production {
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.details-card .production span {
+  font-style: italic;
+  color: #e50813;
+}
+.details-card p {
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-weight: 400;
+}
+.details-card .genres {
+  margin-top: 30px;
+  gap: 5px;
+}
+.details-card .genres span {
+  padding: 2px 5px;
+  background-color: green;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.details-card .website {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #e50813;
+}
+.movie-details button.watch {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px 8px #ff00004d;
+  transition: 0.3s linear all;
+}
+.movie-details button.watch:hover {
+  box-shadow: 0px 0px 7px 15px #ff00004d;
+  transform: scale(1.05);
+}

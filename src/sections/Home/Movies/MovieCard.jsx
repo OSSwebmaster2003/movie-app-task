@@ -5,7 +5,6 @@ import { GrFormNextLink } from "react-icons/gr";
 
 const MovieCard = ({ movie }) => {
   const poster = apiConfig.originalImage(movie.poster_path);
-  console.log(movie);
   return (
     <Link to={`/movie/${movie.id}`}>
       <Card
