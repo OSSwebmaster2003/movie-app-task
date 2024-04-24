@@ -1,18 +1,19 @@
-import { useEffect } from "react";
 import BannerSlider from "./BannerSlider";
 import "./banner.css";
 import useMovieStore from "../../../store/movies";
+import { useQuery } from "@tanstack/react-query";
 
 const Banner = () => {
-  const { bannerMovieItems, isLoading, error, fetchBannerMovies } =
-    useMovieStore();
+  const { fetchBannerMovies } = useMovieStore();
 
-  useEffect(() => {
-    fetchBannerMovies();
-  }, []);
+  const { data } = useQuery({
+    queryKey: ["banner-movies"],
+    queryFn: () => fetchBannerMovies(),
+  });
+
   return (
     <section className="bannerSection">
-      <BannerSlider bannerMovieItems={bannerMovieItems} />
+      <BannerSlider bannerMovieItems={data} />
     </section>
   );
 };

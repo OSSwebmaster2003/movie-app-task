@@ -1,9 +1,9 @@
-import { IoSearch } from "react-icons/io5";
-import { Col, Row } from "antd";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Col, Row } from "antd";
+import { IoSearch } from "react-icons/io5";
 import MovieCard from "./MovieCard";
 import "./movies.css";
-import { useCallback, useEffect, useState } from "react";
 
 const Movies = ({ movies, keyword }) => {
   const navigate = useNavigate();
@@ -12,6 +12,7 @@ const Movies = ({ movies, keyword }) => {
   const search = useCallback(() => {
     if (inputValue.trim().length > 0) {
       navigate(`/movie/search/${inputValue}`);
+      console.log("refreshed");
     }
   }, [inputValue, navigate]);
 
@@ -27,6 +28,7 @@ const Movies = ({ movies, keyword }) => {
       document.removeEventListener("keyup", enterEvent);
     };
   }, [inputValue, search]);
+
   return (
     <section className="movies container">
       <div className="section-header flexBetween">
@@ -45,7 +47,7 @@ const Movies = ({ movies, keyword }) => {
       </div>
       <div className="section-body">
         <Row gutter={16}>
-          {movies.map((movie) => (
+          {movies?.map((movie) => (
             <Col
               xs={24}
               sm={12}
