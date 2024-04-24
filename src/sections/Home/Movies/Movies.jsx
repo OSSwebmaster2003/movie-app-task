@@ -1,15 +1,43 @@
 import { IoSearch } from "react-icons/io5";
-import "./movies.css";
 import { Col, Row } from "antd";
+import { useNavigate } from "react-router-dom";
 import MovieCard from "./MovieCard";
+import "./movies.css";
+import { useCallback, useEffect, useState } from "react";
 
-const Movies = ({ movies }) => {
+const Movies = ({ movies, keyword }) => {
+  const navigate = useNavigate();
+  const [inputValue, setInputValue] = useState(keyword ? keyword : "");
+
+  const search = useCallback(() => {
+    if (inputValue.trim().length > 0) {
+      navigate(`/movie/search/${inputValue}`);
+    }
+  }, [inputValue, navigate]);
+
+  useEffect(() => {
+    const enterEvent = (e) => {
+      e.preventDefault();
+      if (e.keyCode === 13) {
+        search();
+      }
+    };
+    document.addEventListener("keyup", enterEvent);
+    return () => {
+      document.removeEventListener("keyup", enterEvent);
+    };
+  }, [inputValue, search]);
   return (
     <section className="movies container">
       <div className="section-header flexBetween">
         <h1>Trending Movies</h1>
         <div className="search-wrapper flexBetween">
-          <input type="text" placeholder="search..." />
+          <input
+            type="text"
+            placeholder="search..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
           <button>
             <IoSearch />
           </button>
